@@ -1,0 +1,16 @@
+﻿@model List<ReviewModel>
+@{
+    ViewData["Title"] = "Reviews";
+}
+
+<h1>Reviews</h1>
+@foreach (var review in Model)
+{
+    <p>
+        <div class="alert alert-dark" role="alert">
+            @review.Name - <b>@review.Rating star(s)</b> - @review.ReviewedOn
+            <br /><br />
+            @review.Review
+        </div>
+    </p>
+}
